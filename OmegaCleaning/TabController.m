@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 com.rudolfmedia. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TabController.h"
 
-@interface ViewController ()
+@interface TabController ()
 
 @end
 
-@implementation ViewController
+@implementation TabController
 
 - (void)viewDidLoad
 {
