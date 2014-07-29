@@ -12,7 +12,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[UINavigationBar appearanceWhenContainedIn:[UITabBarController class], nil] setBarTintColor:[UIColor colorWithRed:0.0 green:0.5568 blue:0.7490 alpha:1.0]];
+    [[UINavigationBar appearanceWhenContainedIn:[UITabBarController class], nil] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearanceWhenContainedIn:[UITabBarController class], nil]setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+    [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:0.0 green:0.5568 blue:0.7490 alpha:1.0]];
+
+
     return YES;
 }
 							

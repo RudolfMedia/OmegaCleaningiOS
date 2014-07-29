@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Account Main-->
         <scene sceneID="1LD-sJ-9rK">
             <objects>
-                <viewController id="Lq1-Rd-akj" sceneMemberID="viewController">
+                <viewController id="Lq1-Rd-akj" customClass="AccountMain" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vob-yO-3S2"/>
                         <viewControllerLayoutGuide type="bottom" id="Xth-yY-qDC"/>
@@ -15,19 +15,156 @@
                     <view key="view" contentMode="scaleToFill" id="Ev8-Uf-ubH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNg-8A-090">
+                                <rect key="frame" x="20" y="165" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YsZ-Wv-H3G">
+                                <rect key="frame" x="20" y="214" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button appearanceType="aqua" opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQw-xq-dkP">
+                                <rect key="frame" x="120" y="326" width="81" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.55686274509803924" blue="0.74901960784313726" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hWT-bt-0dC" kind="push" id="bDr-BF-Yhy"/>
+                                </connections>
+                            </button>
+                            <button appearanceType="aqua" opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Do-sZ-XH5">
+                                <rect key="frame" x="92" y="413" width="136" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UA1-Uy-3Zn" kind="modal" id="fhC-o2-Tg4"/>
+                                </connections>
+                            </button>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRg-Ps-ob8">
+                                <rect key="frame" x="146" y="384" width="28" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="8vm-la-htK"/>
+                    <connections>
+                        <outlet property="createAccountButton" destination="2Do-sZ-XH5" id="YUm-Iw-dOX"/>
+                        <outlet property="emailTextField" destination="bNg-8A-090" id="qnz-7j-F9e"/>
+                        <outlet property="loginButton" destination="qQw-xq-dkP" id="pmY-Sf-0lx"/>
+                        <outlet property="passwordTextField" destination="YsZ-Wv-H3G" id="O9I-mn-57x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oq8-Ro-Opl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="875" y="-673"/>
         </scene>
+        <!--InvoicesVC-->
+        <scene sceneID="AV4-ES-tHi">
+            <objects>
+                <viewController id="hWT-bt-0dC" customClass="InvoicesVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zER-LN-rNF"/>
+                        <viewControllerLayoutGuide type="bottom" id="nGr-he-tne"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yOU-sY-GVQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Sdg-n7-Yhz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="L3j-NZ-N0R" detailTextLabel="8Jv-ZK-w6g" rowHeight="79" style="IBUITableViewCellStyleSubtitle" id="YKg-M8-2Gl">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YKg-M8-2Gl" id="4QJ-QI-fbR">
+                                            <rect key="frame" x="0.0" y="0.0" width="253" height="78"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Date: 7/27/14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L3j-NZ-N0R">
+                                                    <rect key="frame" x="15" y="21" width="121" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                                    <color key="textColor" red="0.35270889950000001" green="0.35270889950000001" blue="0.35270889950000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Inovice No. 67F7X9FH" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Jv-ZK-w6g">
+                                                    <rect key="frame" x="15" y="44" width="122" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                                    <color key="textColor" red="0.35270889950000001" green="0.35270889950000001" blue="0.35270889950000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="tintColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <segue destination="CdQ-Sa-WCc" kind="push" id="xjZ-gu-lhK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hWT-bt-0dC" id="0R7-8y-hH4"/>
+                                    <outlet property="delegate" destination="hWT-bt-0dC" id="5ZX-AI-q7U"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jy8-cZ-FSe"/>
+                    <connections>
+                        <outlet property="invoiceTableView" destination="Sdg-n7-Yhz" id="NwM-Vg-3hb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fe1-VK-1ch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1455" y="-673"/>
+        </scene>
+        <!--Invoice DetailVC-->
+        <scene sceneID="c4l-gd-VAs">
+            <objects>
+                <viewController id="CdQ-Sa-WCc" customClass="InvoiceDetailVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mNC-ui-Rln"/>
+                        <viewControllerLayoutGuide type="bottom" id="FcH-F8-fYi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="86P-TY-fK9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lk7-e9-ZYq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbN-Zn-qKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="-673"/>
+        </scene>
         <!--Tab Controller-->
         <scene sceneID="5A6-9C-fq2">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="Fly-z4-iym" customClass="TabController" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="wxX-da-8aR">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -43,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="-185" y="20"/>
         </scene>
-        <!--View Controller-->
+        <!--Request CleaningVC-->
         <scene sceneID="3KP-8E-r2z">
             <objects>
-                <viewController id="t9M-sj-VIS" sceneMemberID="viewController">
+                <viewController id="t9M-sj-VIS" customClass="RequestCleaningVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UHw-np-4Rz"/>
                         <viewControllerLayoutGuide type="bottom" id="xo4-Vf-y2Q"/>
@@ -54,18 +191,54 @@
                     <view key="view" contentMode="scaleToFill" id="nt8-ny-Ptk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JR9-ap-IDi">
+                                <rect key="frame" x="20" y="135" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sWF-em-d7P">
+                                <rect key="frame" x="20" y="184" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact Phone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-7h-fVb">
+                                <rect key="frame" x="20" y="231" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" secureTextEntry="YES"/>
+                            </textField>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oy5-Uk-187">
+                                <rect key="frame" x="80" y="344" width="160" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="Request Cleaning">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="0OL-Fd-bUI"/>
+                    <connections>
+                        <outlet property="requesCleaningAddressField" destination="sWF-em-d7P" id="uQI-CC-jYa"/>
+                        <outlet property="requestCleaningButton" destination="Oy5-Uk-187" id="rAx-Xi-ELF"/>
+                        <outlet property="requestCleaningNameField" destination="JR9-ap-IDi" id="bYG-PA-Uf1"/>
+                        <outlet property="requestCleaningPhoneField" destination="IlS-7h-fVb" id="yzU-hC-fFm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Nb-Ll-ZYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="875" y="20"/>
         </scene>
-        <!--View Controller-->
+        <!--Request QuoteVC-->
         <scene sceneID="xT5-d3-Eec">
             <objects>
-                <viewController id="Pt5-zD-P3u" sceneMemberID="viewController">
+                <viewController id="Pt5-zD-P3u" customClass="RequestQuoteVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vQH-Gh-Fpf"/>
                         <viewControllerLayoutGuide type="bottom" id="Fg3-nG-vta"/>
@@ -73,36 +246,54 @@
                     <view key="view" contentMode="scaleToFill" id="2BG-yf-JOn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RpJ-rZ-mQX">
+                                <rect key="frame" x="20" y="135" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwX-qu-4hA">
+                                <rect key="frame" x="20" y="184" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact Phone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHl-dP-rtc">
+                                <rect key="frame" x="20" y="231" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" secureTextEntry="YES"/>
+                            </textField>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLA-YB-cct">
+                                <rect key="frame" x="80" y="344" width="160" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="Get a Quote">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="MKS-0u-nXa"/>
+                    <connections>
+                        <outlet property="requestQuoteAddressField" destination="gwX-qu-4hA" id="OpJ-Du-kBv"/>
+                        <outlet property="requestQuoteButton" destination="iLA-YB-cct" id="BKo-8o-0Sc"/>
+                        <outlet property="requestQuoteNameField" destination="RpJ-rZ-mQX" id="UeI-Yz-Z2i"/>
+                        <outlet property="requestQuotePhoneField" destination="xHl-dP-rtc" id="59W-D5-PuC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eX-AP-ec9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="875" y="716"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="WSR-9t-Lnh">
-            <objects>
-                <viewController id="YcY-3E-KRL" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EXg-54-e10"/>
-                        <viewControllerLayoutGuide type="bottom" id="dxu-3z-KlP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="X4f-GR-1NY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bnX-f6-KdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="349" y="-1374"/>
-        </scene>
-        <!--View Controller-->
+        <!--SignupVC-->
         <scene sceneID="aTb-e2-yMB">
             <objects>
-                <viewController id="UA1-Uy-3Zn" sceneMemberID="viewController">
+                <viewController id="UA1-Uy-3Zn" customClass="SignupVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8xp-Gk-MdR"/>
                         <viewControllerLayoutGuide type="bottom" id="zFG-gW-3L3"/>
@@ -110,18 +301,73 @@
                     <view key="view" contentMode="scaleToFill" id="aMW-dY-IVQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKs-M5-PLh">
+                                <rect key="frame" x="14" y="14" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                <state key="normal" title="X">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDismissSignup:" destination="UA1-Uy-3Zn" eventType="touchUpInside" id="orJ-uF-aXt"/>
+                                </connections>
+                            </button>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j4H-fU-bsi">
+                                <rect key="frame" x="20" y="117" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZP-b2-OpG">
+                                <rect key="frame" x="20" y="166" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5n1-Co-PYl">
+                                <rect key="frame" x="20" y="214" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t3T-Hk-3Rw">
+                                <rect key="frame" x="20" y="262" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuU-yS-VKs">
+                                <rect key="frame" x="90" y="364" width="141" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPassSignupTextField" destination="t3T-Hk-3Rw" id="D4w-u2-t6L"/>
+                        <outlet property="createAccountbutton" destination="QuU-yS-VKs" id="dks-sg-coS"/>
+                        <outlet property="emailSignupTextFeld" destination="sZP-b2-OpG" id="BIM-6Z-9V8"/>
+                        <outlet property="nameSignupTextfield" destination="j4H-fU-bsi" id="qW7-9B-aY0"/>
+                        <outlet property="passwordSignupTextField" destination="5n1-Co-PYl" id="xc2-Z6-xjy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFe-81-xgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875" y="-1374"/>
+            <point key="canvasLocation" x="1416" y="-1393"/>
         </scene>
         <!--Navigation Controller - My Account-->
         <scene sceneID="R5X-ze-pIF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gJY-aI-As2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Account" id="g10-mQ-Brr"/>
+                    <tabBarItem key="tabBarItem" title="My Account" image="acounttab" id="g10-mQ-Brr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vF1-bK-Hb3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -136,11 +382,11 @@
             </objects>
             <point key="canvasLocation" x="349" y="-673"/>
         </scene>
-        <!--Navigation Controller - Request Cleaning-->
+        <!--Navigation Controller - Schedule Cleaning-->
         <scene sceneID="XFW-1p-INA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="siV-Rp-Xxd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Request Cleaning" id="xnz-Gd-VU8"/>
+                    <tabBarItem key="tabBarItem" title="Schedule Cleaning" image="cleaningtab" id="xnz-Gd-VU8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bxi-7s-9Lv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -159,7 +405,7 @@
         <scene sceneID="i4E-Y2-RLP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Pw-Zq-whS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Get Quote" id="Qfx-HS-x4b"/>
+                    <tabBarItem key="tabBarItem" title="Get Quote" image="quotetab" id="Qfx-HS-x4b"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="p6P-Hj-X3o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -175,6 +421,11 @@
             <point key="canvasLocation" x="349" y="716"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="acounttab" width="26" height="26"/>
+        <image name="cleaningtab" width="25" height="29"/>
+        <image name="quotetab" width="25" height="24"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

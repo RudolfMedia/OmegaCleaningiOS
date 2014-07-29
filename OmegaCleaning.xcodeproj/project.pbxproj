@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26331D911988340900D0F4EF /* InvoicesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26331D901988340900D0F4EF /* InvoicesVC.m */; };
+		265C2154198802A20093DC8E /* SignupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 265C2153198802A20093DC8E /* SignupVC.m */; };
+		265C2157198802D70093DC8E /* AccountMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 265C2156198802D70093DC8E /* AccountMain.m */; };
+		265C215A198803090093DC8E /* RequestCleaningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 265C2159198803090093DC8E /* RequestCleaningVC.m */; };
+		265C215D198803220093DC8E /* RequestQuoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 265C215C198803220093DC8E /* RequestQuoteVC.m */; };
+		267435A81988392A00AB9BF3 /* InvoiceDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 267435A71988392A00AB9BF3 /* InvoiceDetailVC.m */; };
 		26B984541985D80600105F7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B984531985D80600105F7B /* Foundation.framework */; };
 		26B984561985D80600105F7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B984551985D80600105F7B /* CoreGraphics.framework */; };
 		26B984581985D80600105F7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B984571985D80600105F7B /* UIKit.framework */; };
@@ -21,6 +27,7 @@
 		26B984751985D80600105F7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B984571985D80600105F7B /* UIKit.framework */; };
 		26B9847D1985D80600105F7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26B9847B1985D80600105F7B /* InfoPlist.strings */; };
 		26B9847F1985D80600105F7B /* OmegaCleaningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B9847E1985D80600105F7B /* OmegaCleaningTests.m */; };
+		26F40C3A1988215600DA6D79 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F40C391988215600DA6D79 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26331D8F1988340900D0F4EF /* InvoicesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoicesVC.h; sourceTree = "<group>"; };
+		26331D901988340900D0F4EF /* InvoicesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoicesVC.m; sourceTree = "<group>"; };
+		265C2152198802A20093DC8E /* SignupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupVC.h; sourceTree = "<group>"; };
+		265C2153198802A20093DC8E /* SignupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupVC.m; sourceTree = "<group>"; };
+		265C2155198802D70093DC8E /* AccountMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMain.h; sourceTree = "<group>"; };
+		265C2156198802D70093DC8E /* AccountMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountMain.m; sourceTree = "<group>"; };
+		265C2158198803090093DC8E /* RequestCleaningVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestCleaningVC.h; sourceTree = "<group>"; };
+		265C2159198803090093DC8E /* RequestCleaningVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestCleaningVC.m; sourceTree = "<group>"; };
+		265C215B198803220093DC8E /* RequestQuoteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestQuoteVC.h; sourceTree = "<group>"; };
+		265C215C198803220093DC8E /* RequestQuoteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestQuoteVC.m; sourceTree = "<group>"; };
+		267435A61988392A00AB9BF3 /* InvoiceDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoiceDetailVC.h; sourceTree = "<group>"; };
+		267435A71988392A00AB9BF3 /* InvoiceDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceDetailVC.m; sourceTree = "<group>"; };
 		26B984501985D80600105F7B /* OmegaCleaning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmegaCleaning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B984531985D80600105F7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		26B984551985D80600105F7B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +72,7 @@
 		26B9847A1985D80600105F7B /* OmegaCleaningTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OmegaCleaningTests-Info.plist"; sourceTree = "<group>"; };
 		26B9847C1985D80600105F7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		26B9847E1985D80600105F7B /* OmegaCleaningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OmegaCleaningTests.m; sourceTree = "<group>"; };
+		26F40C391988215600DA6D79 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F40C3A1988215600DA6D79 /* MessageUI.framework in Frameworks */,
 				26B984561985D80600105F7B /* CoreGraphics.framework in Frameworks */,
 				26B984581985D80600105F7B /* UIKit.framework in Frameworks */,
 				26B984541985D80600105F7B /* Foundation.framework in Frameworks */,
@@ -79,6 +100,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		265C21511988024A0093DC8E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				26B984681985D80600105F7B /* TabController.h */,
+				26B984691985D80600105F7B /* TabController.m */,
+				265C2152198802A20093DC8E /* SignupVC.h */,
+				265C2153198802A20093DC8E /* SignupVC.m */,
+				265C2155198802D70093DC8E /* AccountMain.h */,
+				265C2156198802D70093DC8E /* AccountMain.m */,
+				265C2158198803090093DC8E /* RequestCleaningVC.h */,
+				265C2159198803090093DC8E /* RequestCleaningVC.m */,
+				265C215B198803220093DC8E /* RequestQuoteVC.h */,
+				265C215C198803220093DC8E /* RequestQuoteVC.m */,
+				26331D8F1988340900D0F4EF /* InvoicesVC.h */,
+				26331D901988340900D0F4EF /* InvoicesVC.m */,
+				267435A61988392A00AB9BF3 /* InvoiceDetailVC.h */,
+				267435A71988392A00AB9BF3 /* InvoiceDetailVC.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		26B984471985D80600105F7B = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +143,7 @@
 		26B984521985D80600105F7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26F40C391988215600DA6D79 /* MessageUI.framework */,
 				26B984531985D80600105F7B /* Foundation.framework */,
 				26B984551985D80600105F7B /* CoreGraphics.framework */,
 				26B984571985D80600105F7B /* UIKit.framework */,
@@ -112,11 +155,10 @@
 		26B984591985D80600105F7B /* OmegaCleaning */ = {
 			isa = PBXGroup;
 			children = (
+				26B984651985D80600105F7B /* Main.storyboard */,
 				26B984621985D80600105F7B /* AppDelegate.h */,
 				26B984631985D80600105F7B /* AppDelegate.m */,
-				26B984651985D80600105F7B /* Main.storyboard */,
-				26B984681985D80600105F7B /* TabController.h */,
-				26B984691985D80600105F7B /* TabController.m */,
+				265C21511988024A0093DC8E /* ViewControllers */,
 				26B9846B1985D80600105F7B /* Images.xcassets */,
 				26B9845A1985D80600105F7B /* Supporting Files */,
 			);
@@ -249,8 +291,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				267435A81988392A00AB9BF3 /* InvoiceDetailVC.m in Sources */,
+				26331D911988340900D0F4EF /* InvoicesVC.m in Sources */,
 				26B9846A1985D80600105F7B /* TabController.m in Sources */,
 				26B984641985D80600105F7B /* AppDelegate.m in Sources */,
+				265C2157198802D70093DC8E /* AccountMain.m in Sources */,
+				265C215D198803220093DC8E /* RequestQuoteVC.m in Sources */,
+				265C215A198803090093DC8E /* RequestCleaningVC.m in Sources */,
+				265C2154198802A20093DC8E /* SignupVC.m in Sources */,
 				26B984601985D80600105F7B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +427,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OmegaCleaning/OmegaCleaning-Prefix.pch";
 				INFOPLIST_FILE = "OmegaCleaning/OmegaCleaning-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -392,6 +441,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OmegaCleaning/OmegaCleaning-Prefix.pch";
 				INFOPLIST_FILE = "OmegaCleaning/OmegaCleaning-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -456,6 +506,7 @@
 				26B984841985D80600105F7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26B984851985D80600105F7B /* Build configuration list for PBXNativeTarget "OmegaCleaningTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +515,7 @@
 				26B984871985D80600105F7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
