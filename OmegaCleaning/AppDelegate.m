@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -18,6 +19,9 @@
     [[UINavigationBar appearanceWhenContainedIn:[UITabBarController class], nil]setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
     [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
     [[UITabBar appearance] setTintColor:[UIColor colorWithRed:0.0 green:0.5568 blue:0.7490 alpha:1.0]];
+
+    [Parse setApplicationId:@"d7ERHwPLPOpiKL04t4XsJ79hD1exMPJJwoQKMLFi"
+                  clientKey:@"40tP4wf2lD24BLHJSn1RQM2noweA8eN3Kx1vxLEy"];
 
 
     return YES;

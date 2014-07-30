@@ -39,7 +39,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hWT-bt-0dC" kind="push" id="bDr-BF-Yhy"/>
+                                    <action selector="onLoginPressed:" destination="Lq1-Rd-akj" eventType="touchUpInside" id="eNw-d6-Zkl"/>
                                 </connections>
                             </button>
                             <button appearanceType="aqua" opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Do-sZ-XH5">
@@ -63,15 +63,22 @@
                                 <color key="textColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView appearanceType="aqua" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="g5i-6I-cpX">
+                                <rect key="frame" x="150" y="336" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="8vm-la-htK"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="g5i-6I-cpX" id="cez-BT-qCn"/>
                         <outlet property="createAccountButton" destination="2Do-sZ-XH5" id="YUm-Iw-dOX"/>
                         <outlet property="emailTextField" destination="bNg-8A-090" id="qnz-7j-F9e"/>
                         <outlet property="loginButton" destination="qQw-xq-dkP" id="pmY-Sf-0lx"/>
                         <outlet property="passwordTextField" destination="YsZ-Wv-H3G" id="O9I-mn-57x"/>
+                        <segue destination="hWT-bt-0dC" kind="push" identifier="ShowList" id="5A3-1r-uxW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oq8-Ro-Opl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fe1-VK-1ch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1455" y="-673"/>
+            <point key="canvasLocation" x="1416" y="-673"/>
         </scene>
         <!--Invoice DetailVC-->
         <scene sceneID="c4l-gd-VAs">
@@ -158,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbN-Zn-qKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="-673"/>
+            <point key="canvasLocation" x="1850" y="-673"/>
         </scene>
         <!--Tab Controller-->
         <scene sceneID="5A6-9C-fq2">
@@ -202,13 +209,13 @@
                                 <rect key="frame" x="20" y="184" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact Phone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-7h-fVb">
                                 <rect key="frame" x="20" y="231" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oy5-Uk-187">
                                 <rect key="frame" x="80" y="344" width="160" height="40"/>
@@ -257,13 +264,13 @@
                                 <rect key="frame" x="20" y="184" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact Phone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHl-dP-rtc">
                                 <rect key="frame" x="20" y="231" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLA-YB-cct">
                                 <rect key="frame" x="80" y="344" width="160" height="40"/>
@@ -307,6 +314,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
                                 <state key="normal" title="X">
+                                    <color key="titleColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -347,11 +355,29 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSignupPressed:" destination="UA1-Uy-3Zn" eventType="touchUpInside" id="hRN-P6-i41"/>
+                                </connections>
                             </button>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signuptitle" translatesAutoresizingMaskIntoConstraints="NO" id="759-yj-bVy">
+                                <rect key="frame" x="0.0" y="42" width="320" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <activityIndicatorView appearanceType="aqua" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Wyd-3d-Tot">
+                                <rect key="frame" x="150" y="374" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
+                            </activityIndicatorView>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="Fkf-xB-PJn">
+                                <rect key="frame" x="138" y="364" width="44" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Wyd-3d-Tot" id="KzI-KI-5gt"/>
+                        <outlet property="checkImageView" destination="Fkf-xB-PJn" id="VJe-zd-0hd"/>
                         <outlet property="confirmPassSignupTextField" destination="t3T-Hk-3Rw" id="D4w-u2-t6L"/>
                         <outlet property="createAccountbutton" destination="QuU-yS-VKs" id="dks-sg-coS"/>
                         <outlet property="emailSignupTextFeld" destination="sZP-b2-OpG" id="BIM-6Z-9V8"/>
@@ -361,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFe-81-xgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416" y="-1393"/>
+            <point key="canvasLocation" x="1416" y="-1389"/>
         </scene>
         <!--Navigation Controller - My Account-->
         <scene sceneID="R5X-ze-pIF">
@@ -375,7 +401,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Lq1-Rd-akj" kind="relationship" relationship="rootViewController" id="6OO-iC-3MD"/>
+                        <segue destination="Lq1-Rd-akj" kind="relationship" relationship="rootViewController" id="Nu4-S8-a7H"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5d-i2-5qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -423,8 +449,10 @@
     </scenes>
     <resources>
         <image name="acounttab" width="26" height="26"/>
+        <image name="check" width="22" height="21"/>
         <image name="cleaningtab" width="25" height="29"/>
         <image name="quotetab" width="25" height="24"/>
+        <image name="signuptitle" width="179" height="33"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

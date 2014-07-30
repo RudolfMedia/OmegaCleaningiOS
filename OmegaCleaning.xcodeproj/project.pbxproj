@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		26331D911988340900D0F4EF /* InvoicesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26331D901988340900D0F4EF /* InvoicesVC.m */; };
+		264B7695198958D80006545F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B7694198958D80006545F /* Parse.framework */; };
+		264B769F1989593F0006545F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B76961989593F0006545F /* AudioToolbox.framework */; };
+		264B76A01989593F0006545F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B76971989593F0006545F /* CFNetwork.framework */; };
+		264B76A11989593F0006545F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B76981989593F0006545F /* CoreLocation.framework */; };
+		264B76A21989593F0006545F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B76991989593F0006545F /* libz.dylib */; };
+		264B76A31989593F0006545F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B769A1989593F0006545F /* MobileCoreServices.framework */; };
+		264B76A41989593F0006545F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B769B1989593F0006545F /* QuartzCore.framework */; };
+		264B76A51989593F0006545F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B769C1989593F0006545F /* Security.framework */; };
+		264B76A61989593F0006545F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B769D1989593F0006545F /* StoreKit.framework */; };
+		264B76A71989593F0006545F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B769E1989593F0006545F /* SystemConfiguration.framework */; };
 		265C2154198802A20093DC8E /* SignupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 265C2153198802A20093DC8E /* SignupVC.m */; };
 		265C2157198802D70093DC8E /* AccountMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 265C2156198802D70093DC8E /* AccountMain.m */; };
 		265C215A198803090093DC8E /* RequestCleaningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 265C2159198803090093DC8E /* RequestCleaningVC.m */; };
@@ -43,6 +53,16 @@
 /* Begin PBXFileReference section */
 		26331D8F1988340900D0F4EF /* InvoicesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoicesVC.h; sourceTree = "<group>"; };
 		26331D901988340900D0F4EF /* InvoicesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoicesVC.m; sourceTree = "<group>"; };
+		264B7694198958D80006545F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		264B76961989593F0006545F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		264B76971989593F0006545F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		264B76981989593F0006545F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		264B76991989593F0006545F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		264B769A1989593F0006545F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		264B769B1989593F0006545F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		264B769C1989593F0006545F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		264B769D1989593F0006545F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		264B769E1989593F0006545F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		265C2152198802A20093DC8E /* SignupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupVC.h; sourceTree = "<group>"; };
 		265C2153198802A20093DC8E /* SignupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupVC.m; sourceTree = "<group>"; };
 		265C2155198802D70093DC8E /* AccountMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMain.h; sourceTree = "<group>"; };
@@ -80,10 +100,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26F40C3A1988215600DA6D79 /* MessageUI.framework in Frameworks */,
+				264B769F1989593F0006545F /* AudioToolbox.framework in Frameworks */,
+				264B76A01989593F0006545F /* CFNetwork.framework in Frameworks */,
+				264B76A11989593F0006545F /* CoreLocation.framework in Frameworks */,
+				264B76A21989593F0006545F /* libz.dylib in Frameworks */,
+				264B76A31989593F0006545F /* MobileCoreServices.framework in Frameworks */,
+				264B76A41989593F0006545F /* QuartzCore.framework in Frameworks */,
+				264B76A51989593F0006545F /* Security.framework in Frameworks */,
+				264B76A61989593F0006545F /* StoreKit.framework in Frameworks */,
+				264B76A71989593F0006545F /* SystemConfiguration.framework in Frameworks */,
 				26B984561985D80600105F7B /* CoreGraphics.framework in Frameworks */,
+				26F40C3A1988215600DA6D79 /* MessageUI.framework in Frameworks */,
 				26B984581985D80600105F7B /* UIKit.framework in Frameworks */,
 				26B984541985D80600105F7B /* Foundation.framework in Frameworks */,
+				264B7695198958D80006545F /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +173,16 @@
 		26B984521985D80600105F7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				264B76961989593F0006545F /* AudioToolbox.framework */,
+				264B76971989593F0006545F /* CFNetwork.framework */,
+				264B76981989593F0006545F /* CoreLocation.framework */,
+				264B76991989593F0006545F /* libz.dylib */,
+				264B769A1989593F0006545F /* MobileCoreServices.framework */,
+				264B769B1989593F0006545F /* QuartzCore.framework */,
+				264B769C1989593F0006545F /* Security.framework */,
+				264B769D1989593F0006545F /* StoreKit.framework */,
+				264B769E1989593F0006545F /* SystemConfiguration.framework */,
+				264B7694198958D80006545F /* Parse.framework */,
 				26F40C391988215600DA6D79 /* MessageUI.framework */,
 				26B984531985D80600105F7B /* Foundation.framework */,
 				26B984551985D80600105F7B /* CoreGraphics.framework */,
@@ -424,6 +464,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OmegaCleaning/OmegaCleaning-Prefix.pch";
 				INFOPLIST_FILE = "OmegaCleaning/OmegaCleaning-Info.plist";
@@ -438,6 +482,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OmegaCleaning/OmegaCleaning-Prefix.pch";
 				INFOPLIST_FILE = "OmegaCleaning/OmegaCleaning-Info.plist";

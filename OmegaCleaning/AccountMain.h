@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface AccountMain : UIViewController
 
-//- (void)onHideKeyboard;
 
 @end
