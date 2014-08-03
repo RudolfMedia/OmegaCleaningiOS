@@ -1,0 +1,185 @@
+{
+    "assets": [
+        {
+            "asset": "OmegaCleaningTests/en.lproj/InfoPlist.strings", 
+            "target": "en.lproj/InfoPlist.strings"
+        }
+    ], 
+    "config": {
+        "APPLICATION_IDENTIFIER": "RudolfMedia.OmegaCleaningTests", 
+        "LONG_VERSION": "1", 
+        "SHORT_VERSION": "1.0", 
+        "TEMPLATE_VALUES": {
+            "EXECUTABLE_NAME": "OmegaCleaningTests", 
+            "PRODUCT_NAME": "OmegaCleaningTests"
+        }
+    }, 
+    "defines": {
+        "NS_BLOCK_ASSERTIONS": 1, 
+        "__IPHONE_OS_VERSION_MIN_REQUIRED": 70100
+    }, 
+    "deps": [
+        "UIKit", 
+        "AudioToolbox", 
+        "CFNetwork", 
+        "CoreLocation", 
+        "MobileCoreServices", 
+        "QuartzCore", 
+        "Security", 
+        "StoreKit", 
+        "SystemConfiguration", 
+        "CoreGraphics", 
+        "MessageUI", 
+        "UIKit", 
+        "Foundation", 
+        "Parse", 
+        "XCTest", 
+        "XCTest", 
+        "UIKit", 
+        "Foundation"
+    ], 
+    "flags": [
+        "-fobjc-arc", 
+        "-fasm-blocks", 
+        {
+            "flag": "-std=gnu99", 
+            "not_type": "c++"
+        }, 
+        {
+            "flag": "-fgnu-keywords", 
+            "not_type": "c++"
+        }, 
+        "-fno-asm", 
+        "-fpascal-strings", 
+        "-Wempty-body", 
+        "-Wshorten-64-to-32", 
+        "-Wno-deprecated-declarations", 
+        "-Wswitch", 
+        "-Wparentheses", 
+        "-Wformat", 
+        "-Wunused-function", 
+        "-Wunused-value", 
+        "-Wunused-variable", 
+        {
+            "flag": "-Winvalid-offsetof", 
+            "type": "c++"
+        }, 
+        {
+            "flag": "-Wprotocol", 
+            "type": "objc"
+        }, 
+        {
+            "flag": "-Wundeclared-selector", 
+            "type": "objc"
+        }
+    ], 
+    "header_paths": [
+        {
+            "header_path": "OmegaCleaningTests-generated-files.hmap", 
+            "hmap": {}, 
+            "type": "iquote"
+        }, 
+        {
+            "header_path": "OmegaCleaningTests-own-target-headers.hmap", 
+            "hmap": {}, 
+            "type": "I"
+        }, 
+        {
+            "header_path": "OmegaCleaningTests-all-target-headers.hmap", 
+            "hmap": {}, 
+            "type": "I"
+        }, 
+        {
+            "header_path": "OmegaCleaningTests-project-headers.hmap", 
+            "hmap": {
+                "AccountMain.h": {
+                    "key": "AccountMain.h", 
+                    "prefix": "OmegaCleaning/", 
+                    "suffix": "AccountMain.h"
+                }, 
+                "AppDelegate.h": {
+                    "key": "AppDelegate.h", 
+                    "prefix": "OmegaCleaning/", 
+                    "suffix": "AppDelegate.h"
+                }, 
+                "InvoiceDetailVC.h": {
+                    "key": "InvoiceDetailVC.h", 
+                    "prefix": "OmegaCleaning/", 
+                    "suffix": "InvoiceDetailVC.h"
+                }, 
+                "InvoicesVC.h": {
+                    "key": "InvoicesVC.h", 
+                    "prefix": "OmegaCleaning/", 
+                    "suffix": "InvoicesVC.h"
+                }, 
+                "OmegaCleaning-Prefix.pch": {
+                    "key": "OmegaCleaning-Prefix.pch", 
+                    "prefix": "OmegaCleaning/", 
+                    "suffix": "OmegaCleaning-Prefix.pch"
+                }, 
+                "RequestCleaningVC.h": {
+                    "key": "RequestCleaningVC.h", 
+                    "prefix": "OmegaCleaning/", 
+                    "suffix": "RequestCleaningVC.h"
+                }, 
+                "RequestQuoteVC.h": {
+                    "key": "RequestQuoteVC.h", 
+                    "prefix": "OmegaCleaning/", 
+                    "suffix": "RequestQuoteVC.h"
+                }, 
+                "SignupVC.h": {
+                    "key": "SignupVC.h", 
+                    "prefix": "OmegaCleaning/", 
+                    "suffix": "SignupVC.h"
+                }, 
+                "TabController.h": {
+                    "key": "TabController.h", 
+                    "prefix": "OmegaCleaning/", 
+                    "suffix": "TabController.h"
+                }
+            }, 
+            "type": "iquote"
+        }, 
+        {
+            "header_path": "/var/folders/cv/ct68y7n16319l17s9jz9lbtc0000gn/T/tmptzj6RD/BUILT_PRODUCTS_DIR/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/var/folders/cv/ct68y7n16319l17s9jz9lbtc0000gn/T/tmptzj6RD/DERIVED_FILE_DIR/armv7", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/var/folders/cv/ct68y7n16319l17s9jz9lbtc0000gn/T/tmptzj6RD/DERIVED_FILE_DIR", 
+            "type": "I"
+        }
+    ], 
+    "infoplists": [
+        "./OmegaCleaningTests/OmegaCleaningTests-Info.plist"
+    ], 
+    "libs": [
+        "z"
+    ], 
+    "modules": [], 
+    "pchs": [
+        "./OmegaCleaning/OmegaCleaning-Prefix.pch"
+    ], 
+    "sources": [
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "OmegaCleaningTests/OmegaCleaningTests.m"
+        }
+    ], 
+    "storyboards": [], 
+    "type": "com.apple.product-type.bundle.unit-test", 
+    "version": "3", 
+    "xcdatamodels": [], 
+    "xcode_project": "OmegaCleaning.xcodeproj", 
+    "xibs": []
+}

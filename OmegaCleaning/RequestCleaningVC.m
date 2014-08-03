@@ -8,12 +8,14 @@
 
 #import "RequestCleaningVC.h"
 
-@interface RequestCleaningVC ()
+@interface RequestCleaningVC () <MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *requestCleaningButton;
 @property (weak, nonatomic) IBOutlet UITextField *requestCleaningNameField;
 @property (weak, nonatomic) IBOutlet UITextField *requesCleaningAddressField;
 @property (weak, nonatomic) IBOutlet UITextField *requestCleaningPhoneField;
+
+@property UIAlertView *alert;
 
 @end
 
@@ -40,6 +42,53 @@
     [self. requestCleaningPhoneField resignFirstResponder];
 }
 
+- (IBAction)onRequestCleaning:(id)sender {
+
+    if (self.requestCleaningNameField.text.length ==0) {
+
+        self.alert = [[UIAlertView alloc] initWithTitle:@"Oops! \xF0\x9F\x99\x88"
+                                                message:@"Please enter a name"
+                                               delegate:self
+                                      cancelButtonTitle:@"OK"
+                                      otherButtonTitles:nil];
+        [self.alert show];
+    }
+
+    else if (self.requesCleaningAddressField.text.length ==0){
+
+        self.alert = [[UIAlertView alloc] initWithTitle:@"Oops! \xF0\x9F\x99\x88"
+                                                message:@"Please enter an address"
+                                               delegate:self
+                                      cancelButtonTitle:@"OK"
+                                      otherButtonTitles:nil];
+        [self.alert show];
+
+    }
+
+    else if (self.requestCleaningPhoneField.text.length == 0){
+
+        self.alert = [[UIAlertView alloc] initWithTitle:@"Oops! \xF0\x9F\x99\x88"
+                                                message:@"Please enter an contact phone number"
+                                               delegate:self
+                                      cancelButtonTitle:@"OK"
+                                      otherButtonTitles:nil];
+        [self.alert show];
+    }
+
+    else{
+
+        MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
+        [mailComposer setSubject:@"Cleaning Request"];
+        [mailComposer setToRecipients:@[@"danrudolf@gmail.com"]];
+        [mailComposer setMessageBody:[NSString stringWithFormat:@"Hello,\nI would like to request a cleaning at %@.\n \n Please feel free to Contact %@ at %@. \n \n Thanks!", self.requesCleaningAddressField.text, self.requestCleaningNameField.text, self.requestCleaningPhoneField.text] isHTML:NO];
+
+        [self presentViewController:mailComposer animated:YES
+                         completion:^{
+                             
+                         }];
+    }
+
+}
 
 
 @end

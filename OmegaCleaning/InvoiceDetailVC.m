@@ -9,6 +9,11 @@
 #import "InvoiceDetailVC.h"
 
 @interface InvoiceDetailVC ()
+@property (weak, nonatomic) IBOutlet UILabel *invoiceNumber;
+@property (weak, nonatomic) IBOutlet UILabel *date;
+@property (weak, nonatomic) IBOutlet UILabel *address;
+@property (weak, nonatomic) IBOutlet UITextView *detials;
+@property (weak, nonatomic) IBOutlet UILabel *totalCost;
 
 @end
 
@@ -20,8 +25,15 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar.topItem setTitle:@""];
 
-}
+    self.invoiceNumber.text = [self.detailDictionary objectForKey:@"InvoiceNumber"];
+    self.date.text = [self.detailDictionary objectForKey:@"Date"];
+    self.address.text = [self.detailDictionary objectForKey:@"Address"];
+    NSString *details = [(NSString *)[self.detailDictionary valueForKey:@"Details"] stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
 
+    self.detials.text = details;
+    self.totalCost.text = [self.detailDictionary objectForKey:@"TotalCost"];
+
+}
 
 
 @end

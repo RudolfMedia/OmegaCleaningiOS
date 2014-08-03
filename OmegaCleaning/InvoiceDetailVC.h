@@ -10,4 +10,6 @@
 
 @interface InvoiceDetailVC : UIViewController
 
+@property NSDictionary *detailDictionary;
+
 @end
