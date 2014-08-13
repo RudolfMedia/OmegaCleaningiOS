@@ -34,6 +34,13 @@
     [self.view addGestureRecognizer:screenTap];
 }
 
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+
+    [controller dismissViewControllerAnimated:YES completion:^{
+
+    }];
+}
+
 - (void)onHideKeyboard{
 
     [self.requestQuoteNameField resignFirstResponder];
@@ -77,6 +84,8 @@
     else{
 
     MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
+    mailComposer.mailComposeDelegate = self;
+
     [mailComposer setSubject:@"Quote Request"];
     [mailComposer setToRecipients:@[@"danrudolf@gmail.com"]];
     [mailComposer setMessageBody:[NSString stringWithFormat:@"Hello,\nI would like to request a Quote for a cleaning at %@.\n \nPlease feel free to Contact %@ at %@. \n\n" , self.requestQuoteNameField.text, self.requestQuoteAddressField.text, self.requestQuotePhoneField.text] isHTML:NO];

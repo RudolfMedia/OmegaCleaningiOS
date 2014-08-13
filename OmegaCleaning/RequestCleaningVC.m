@@ -42,6 +42,13 @@
     [self. requestCleaningPhoneField resignFirstResponder];
 }
 
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+
+    [controller dismissViewControllerAnimated:YES completion:^{
+
+    }];
+}
+
 - (IBAction)onRequestCleaning:(id)sender {
 
     if (self.requestCleaningNameField.text.length ==0) {
@@ -78,6 +85,8 @@
     else{
 
         MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
+        mailComposer.mailComposeDelegate = self;
+
         [mailComposer setSubject:@"Cleaning Request"];
         [mailComposer setToRecipients:@[@"danrudolf@gmail.com"]];
         [mailComposer setMessageBody:[NSString stringWithFormat:@"Hello,\nI would like to request a cleaning at %@.\n \n Please feel free to Contact %@ at %@. \n \n Thanks!", self.requesCleaningAddressField.text, self.requestCleaningNameField.text, self.requestCleaningPhoneField.text] isHTML:NO];
