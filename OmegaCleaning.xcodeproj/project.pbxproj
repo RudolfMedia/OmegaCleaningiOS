@@ -18,6 +18,8 @@
 		264B76A51989593F0006545F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B769C1989593F0006545F /* Security.framework */; };
 		264B76A61989593F0006545F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B769D1989593F0006545F /* StoreKit.framework */; };
 		264B76A71989593F0006545F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B769E1989593F0006545F /* SystemConfiguration.framework */; };
+		2659FCBE19A26E070046DBC2 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2659FCBC19A26E070046DBC2 /* splash.png */; };
+		2659FCBF19A26E070046DBC2 /* SplashLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 2659FCBD19A26E070046DBC2 /* SplashLarge.png */; };
 		265C2154198802A20093DC8E /* SignupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 265C2153198802A20093DC8E /* SignupVC.m */; };
 		265C2157198802D70093DC8E /* AccountMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 265C2156198802D70093DC8E /* AccountMain.m */; };
 		265C215A198803090093DC8E /* RequestCleaningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 265C2159198803090093DC8E /* RequestCleaningVC.m */; };
@@ -63,6 +65,8 @@
 		264B769C1989593F0006545F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		264B769D1989593F0006545F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		264B769E1989593F0006545F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2659FCBC19A26E070046DBC2 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		2659FCBD19A26E070046DBC2 /* SplashLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashLarge.png; sourceTree = "<group>"; };
 		265C2152198802A20093DC8E /* SignupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupVC.h; sourceTree = "<group>"; };
 		265C2153198802A20093DC8E /* SignupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupVC.m; sourceTree = "<group>"; };
 		265C2155198802D70093DC8E /* AccountMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMain.h; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 		26B984471985D80600105F7B = {
 			isa = PBXGroup;
 			children = (
+				2659FCBC19A26E070046DBC2 /* splash.png */,
+				2659FCBD19A26E070046DBC2 /* SplashLarge.png */,
 				26B984591985D80600105F7B /* OmegaCleaning */,
 				26B984781985D80600105F7B /* OmegaCleaningTests */,
 				26B984521985D80600105F7B /* Frameworks */,
@@ -310,9 +316,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2659FCBE19A26E070046DBC2 /* splash.png in Resources */,
 				26B9846C1985D80600105F7B /* Images.xcassets in Resources */,
 				26B9845E1985D80600105F7B /* InfoPlist.strings in Resources */,
 				26B984671985D80600105F7B /* Main.storyboard in Resources */,
+				2659FCBF19A26E070046DBC2 /* SplashLarge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,7 +479,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OmegaCleaning/OmegaCleaning-Prefix.pch";
 				INFOPLIST_FILE = "OmegaCleaning/OmegaCleaning-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -489,7 +497,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OmegaCleaning/OmegaCleaning-Prefix.pch";
 				INFOPLIST_FILE = "OmegaCleaning/OmegaCleaning-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

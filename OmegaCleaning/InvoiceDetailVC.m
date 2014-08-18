@@ -13,6 +13,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *date;
 @property (weak, nonatomic) IBOutlet UILabel *address;
 @property (weak, nonatomic) IBOutlet UITextView *detials;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+
 @property (weak, nonatomic) IBOutlet UILabel *totalCost;
 
 @end
@@ -32,6 +35,12 @@
 
     self.detials.text = details;
     self.totalCost.text = [self.detailDictionary objectForKey:@"TotalCost"];
+
+}
+
+- (void) viewDidAppear:(BOOL)animated{
+    CGSize size = self.containerView.frame.size;
+    self.textViewHeightConstraint.constant = size.height;
 
 }
 
