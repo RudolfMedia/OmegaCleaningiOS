@@ -222,14 +222,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhT-CM-Qqd">
-                                <rect key="frame" x="71" y="475" width="150" height="21"/>
+                                <rect key="frame" x="73" y="475" width="150" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="19"/>
                                 <color key="textColor" red="0.35270889950000001" green="0.35270889950000001" blue="0.35270889950000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ6-FU-bNM">
-                                <rect key="frame" x="0.0" y="458" width="297" height="2"/>
+                                <rect key="frame" x="0.0" y="463" width="297" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.35270889950000001" green="0.35270889950000001" blue="0.35270889950000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -240,15 +240,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="laz-rP-7Bv">
-                                <rect key="frame" x="16" y="202" width="280" height="204"/>
+                                <rect key="frame" x="16" y="202" width="280" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="details" translatesAutoresizingMaskIntoConstraints="NO" id="ltT-9G-S9g">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="204"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="204" id="5fa-dy-msQ"/>
+                                            <constraint firstAttribute="height" constant="250" id="T6w-bj-4ik"/>
                                         </constraints>
                                         <color key="textColor" red="0.35270889950000001" green="0.35270889950000001" blue="0.35270889950000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="19"/>
@@ -257,20 +257,20 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ltT-9G-S9g" secondAttribute="bottom" id="8OY-h1-jg9"/>
-                                    <constraint firstItem="ltT-9G-S9g" firstAttribute="top" secondItem="laz-rP-7Bv" secondAttribute="top" id="V0F-QA-S8U"/>
-                                    <constraint firstItem="ltT-9G-S9g" firstAttribute="leading" secondItem="laz-rP-7Bv" secondAttribute="leading" id="i1x-cy-Fp9"/>
-                                    <constraint firstAttribute="trailing" secondItem="ltT-9G-S9g" secondAttribute="trailing" id="jRD-po-ugI"/>
+                                    <constraint firstItem="ltT-9G-S9g" firstAttribute="top" secondItem="laz-rP-7Bv" secondAttribute="top" id="8RR-o7-ZDw"/>
+                                    <constraint firstItem="ltT-9G-S9g" firstAttribute="leading" secondItem="laz-rP-7Bv" secondAttribute="leading" id="JDC-Zv-zzs"/>
+                                    <constraint firstAttribute="trailing" secondItem="ltT-9G-S9g" secondAttribute="trailing" id="XwL-Tq-cWh"/>
+                                    <constraint firstAttribute="bottom" secondItem="ltT-9G-S9g" secondAttribute="bottom" id="zuF-Sy-lh2"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FcH-F8-fYi" firstAttribute="top" secondItem="NJ6-FU-bNM" secondAttribute="bottom" constant="59" id="3Kf-s9-ehr"/>
                             <constraint firstItem="FcH-F8-fYi" firstAttribute="top" secondItem="zYc-jQ-nKg" secondAttribute="bottom" constant="23" id="A8F-Bk-cJl"/>
-                            <constraint firstItem="laz-rP-7Bv" firstAttribute="top" secondItem="mNC-ui-Rln" secondAttribute="bottom" constant="138" id="OLc-n1-tKn"/>
+                            <constraint firstItem="laz-rP-7Bv" firstAttribute="top" secondItem="mNC-ui-Rln" secondAttribute="bottom" constant="138" id="Dg3-7n-Txg"/>
+                            <constraint firstItem="NJ6-FU-bNM" firstAttribute="top" secondItem="laz-rP-7Bv" secondAttribute="bottom" constant="10" id="K4M-Rt-lvg"/>
+                            <constraint firstItem="FcH-F8-fYi" firstAttribute="top" secondItem="laz-rP-7Bv" secondAttribute="bottom" constant="67" id="MPD-za-WTE"/>
                             <constraint firstItem="FcH-F8-fYi" firstAttribute="top" secondItem="qhT-CM-Qqd" secondAttribute="bottom" constant="23" id="u8s-qv-40L"/>
-                            <constraint firstItem="FcH-F8-fYi" firstAttribute="top" secondItem="laz-rP-7Bv" secondAttribute="bottom" constant="113" id="v17-T7-Tkt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lk7-e9-ZYq"/>
@@ -280,7 +280,7 @@
                         <outlet property="date" destination="bIh-vV-8CJ" id="hkz-dq-6Zc"/>
                         <outlet property="detials" destination="ltT-9G-S9g" id="2Yl-1C-NjY"/>
                         <outlet property="invoiceNumber" destination="O7f-o5-kou" id="uJN-Nr-Weu"/>
-                        <outlet property="textViewHeightConstraint" destination="5fa-dy-msQ" id="6yR-cH-GoK"/>
+                        <outlet property="textViewHeightconstraint" destination="T6w-bj-4ik" id="32e-jS-Ig1"/>
                         <outlet property="totalCost" destination="qhT-CM-Qqd" id="8nb-OU-7fo"/>
                     </connections>
                 </viewController>
