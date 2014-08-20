@@ -63,6 +63,11 @@
                                         [self.activityIndicator stopAnimating];
                                         [self.loginButton setHidden:NO];
                                         [self.activityIndicator setHidden:YES];
+                                        PFInstallation *installation = [PFInstallation currentInstallation];
+                                        installation[@"user"] = [PFUser currentUser];
+                                        installation[@"username"] = [PFUser currentUser].username;
+                                        [installation saveInBackground];
+
                                         [self performSegueWithIdentifier:@"ShowList" sender:self];
                                         
                                     }

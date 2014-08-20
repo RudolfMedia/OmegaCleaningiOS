@@ -22,9 +22,26 @@
 
     [Parse setApplicationId:@"d7ERHwPLPOpiKL04t4XsJ79hD1exMPJJwoQKMLFi"
                   clientKey:@"40tP4wf2lD24BLHJSn1RQM2noweA8eN3Kx1vxLEy"];
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge |
+                                                    UIRemoteNotificationTypeSound |
+                                                    UIRemoteNotificationTypeAlert];
 
 
     return YES;
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:newDeviceToken];
+    currentInstallation.channels = @[@"global"];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

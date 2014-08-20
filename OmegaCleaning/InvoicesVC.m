@@ -25,6 +25,8 @@
     [super viewDidLoad];
     self.invoiceArray = [NSMutableArray new];
     [self.navigationItem setHidesBackButton:YES animated:YES];
+    self.invoiceTableView.delegate = self;
+
     [self getInvoiceData];
 
 }
@@ -40,18 +42,19 @@
 
                 [self.invoiceArray addObject:invoice];
             }
-            NSLog(@"%@", self.invoiceArray);
             [self.invoiceTableView reloadData];
         }
 
         else{
 
-            NSLog(@"%@",error.description);
         }
     }];
 
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [self.invoiceTableView deselectRowAtIndexPath:[self.invoiceTableView indexPathForSelectedRow] animated:YES];
+}
 
 
 #pragma mark - TableView DataSource / Delegate
