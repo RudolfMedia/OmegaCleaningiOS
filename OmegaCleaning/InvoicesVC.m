@@ -35,6 +35,7 @@
 
     PFQuery *invoiceQuery = [PFQuery queryWithClassName:@"Invoice"];
     [invoiceQuery whereKey:@"CustomerID" equalTo:[PFUser currentUser]];
+    [invoiceQuery addDescendingOrder:@"createdAt"];
     [invoiceQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
         if (!error) {

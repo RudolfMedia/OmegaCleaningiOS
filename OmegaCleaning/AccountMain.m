@@ -54,7 +54,7 @@
     [self.loginButton setHidden:YES];
     [self.activityIndicator setHidden:NO];
 
-    [PFUser logInWithUsernameInBackground:self.emailTextField.text
+    [PFUser logInWithUsernameInBackground:self.emailTextField.text.lowercaseString
                              password:self.passwordTextField.text
                                 block:^(PFUser *user, NSError *error) {
 

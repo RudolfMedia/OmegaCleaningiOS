@@ -14,6 +14,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailSignupTextFeld;
 @property (weak, nonatomic) IBOutlet UITextField *passwordSignupTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPassSignupTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneSignupTextField;
+@property (weak, nonatomic) IBOutlet UITextField *companySignupTextField;
+
+
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIImageView *checkImageView;
 
@@ -99,6 +103,28 @@
         [self.alert show];
     }
 
+    else if (self.companySignupTextField.text.length < 3){
+
+        self.errorString = @"Please Enter a Company Name";
+        self.alert = [[UIAlertView alloc] initWithTitle:@"Oops! \xF0\x9F\x99\x88"
+                                                message:self.errorString
+                                               delegate:self
+                                      cancelButtonTitle:@"OK"
+                                      otherButtonTitles:nil];
+        [self.alert show];
+    }
+    else if (self.phoneSignupTextField.text.length < 9){
+
+        self.errorString = @"Please Enter a Company Name";
+        self.alert = [[UIAlertView alloc] initWithTitle:@"Oops! \xF0\x9F\x99\x88"
+                                                message:self.errorString
+                                               delegate:self
+                                      cancelButtonTitle:@"OK"
+                                      otherButtonTitles:nil];
+        [self.alert show];
+    }
+
+
     else{
 
         [self createNewUser];
@@ -115,9 +141,9 @@
     [self.activityIndicator startAnimating];
 
     PFUser *newUser = [PFUser user];
-    newUser.username = self.emailSignupTextFeld.text;
-    newUser[@"name"] = self.nameSignupTextfield.text;
-    newUser.email = self.emailSignupTextFeld.text;
+    newUser.username = self.emailSignupTextFeld.text.lowercaseString;
+    newUser[@"name"] = self.nameSignupTextfield.text.lowercaseString;
+    newUser.email = self.emailSignupTextFeld.text.lowercaseString;
     newUser.password = self.passwordSignupTextField.text;
 
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -125,8 +151,9 @@
         if (!error) {
 
             [self.checkImageView setHidden:NO];
+            [self.activityIndicator setHidden:YES];
 
-            [self performSelector:@selector(dismissSignup) withObject:nil afterDelay:0.3];
+            [self performSelector:@selector(dismissSignup) withObject:nil afterDelay:0.5];
         }
 
         else{
@@ -159,6 +186,9 @@
     [self.emailSignupTextFeld resignFirstResponder];
     [self.passwordSignupTextField resignFirstResponder];
     [self.confirmPassSignupTextField resignFirstResponder];
+    [self.phoneSignupTextField resignFirstResponder];
+    [self.companySignupTextField resignFirstResponder];
+
 }
 
 
