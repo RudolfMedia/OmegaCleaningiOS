@@ -88,7 +88,7 @@
         mailComposer.mailComposeDelegate = self;
 
         [mailComposer setSubject:@"Cleaning Request"];
-        [mailComposer setToRecipients:@[@"dennisfromomega@gmail.com"]];
+        [mailComposer setToRecipients:@[@"OmegaServicesOffice@gmail.com"]];
         [mailComposer setMessageBody:[NSString stringWithFormat:@"Hello,\nI would like to request a cleaning at %@.\n \n Please feel free to contact %@ at %@. \n \n Thanks!", self.requesCleaningAddressField.text, self.requestCleaningNameField.text, self.requestCleaningPhoneField.text] isHTML:NO];
 
         [self presentViewController:mailComposer animated:YES

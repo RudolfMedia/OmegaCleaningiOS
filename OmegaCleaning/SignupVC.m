@@ -113,9 +113,10 @@
                                       otherButtonTitles:nil];
         [self.alert show];
     }
-    else if (self.phoneSignupTextField.text.length < 9){
 
-        self.errorString = @"Please Enter a Company Name";
+    else if (self.phoneSignupTextField.text.length < 8){
+
+        self.errorString = @"Please Enter a Phone Number";
         self.alert = [[UIAlertView alloc] initWithTitle:@"Oops! \xF0\x9F\x99\x88"
                                                 message:self.errorString
                                                delegate:self
@@ -142,9 +143,11 @@
 
     PFUser *newUser = [PFUser user];
     newUser.username = self.emailSignupTextFeld.text.lowercaseString;
-    newUser[@"name"] = self.nameSignupTextfield.text.lowercaseString;
+    newUser[@"Name"] = self.nameSignupTextfield.text.lowercaseString;
     newUser.email = self.emailSignupTextFeld.text.lowercaseString;
     newUser.password = self.passwordSignupTextField.text;
+    newUser[@"PhoneNumber"] = self.phoneSignupTextField.text;
+    newUser[@"CompanyName"] = self.companySignupTextField.text;
 
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 

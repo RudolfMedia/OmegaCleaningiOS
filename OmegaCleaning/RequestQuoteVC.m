@@ -87,8 +87,8 @@
     mailComposer.mailComposeDelegate = self;
 
     [mailComposer setSubject:@"Quote Request"];
-    [mailComposer setToRecipients:@[@"dennisfromomega@gmail.com"]];
-    [mailComposer setMessageBody:[NSString stringWithFormat:@"Hello,\nI would like to request a Quote for a cleaning at %@.\n \nPlease feel free to contact %@ at %@. \n\n" , self.requestQuoteNameField.text, self.requestQuoteAddressField.text, self.requestQuotePhoneField.text] isHTML:NO];
+    [mailComposer setToRecipients:@[@"OmegaServicesOffice@gmail.com"]];
+    [mailComposer setMessageBody:[NSString stringWithFormat:@"Hello,\nI would like to request a Quote for a cleaning at %@.\n \nPlease feel free to contact %@ at %@. \n\n", self.requestQuoteAddressField.text, self.requestQuoteNameField.text, self.requestQuotePhoneField.text] isHTML:NO];
 
     [self presentViewController:mailComposer animated:YES
                      completion:^{
