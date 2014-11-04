@@ -6,19 +6,15 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DC938D01-6759-41D6-A3C8-A4C8F14A1C06</string>
-	<key>IDESourceControlProjectName</key>
-	<string>OmegaCleaning</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>91A5E0D2127EBF78F3D4138F901BE1DEAA2FD4EE</key>
 		<string>https://github.com/RudolfMedia/OmegaCleaningiOS.git</string>
 	</dict>
-	<key>IDESourceControlProjectPath</key>
-	<string>OmegaCleaning.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>91A5E0D2127EBF78F3D4138F901BE1DEAA2FD4EE</key>
-		<string>../..</string>
+		<string>omegacleaning/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/RudolfMedia/OmegaCleaningiOS.git</string>
@@ -34,7 +30,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>91A5E0D2127EBF78F3D4138F901BE1DEAA2FD4EE</string>
 			<key>IDESourceControlWCCName</key>
-			<string>OmegaCleaning</string>
+			<string>omegacleaning</string>
 		</dict>
 	</array>
 </dict>
