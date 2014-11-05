@@ -28,7 +28,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Do-sZ-XH5">
-                                <rect key="frame" x="92" y="413" width="136" height="40"/>
+                                <rect key="frame" x="92" y="381" width="136" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -40,12 +40,6 @@
                                     <segue destination="UA1-Uy-3Zn" kind="modal" id="fhC-o2-Tg4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRg-Ps-ob8">
-                                <rect key="frame" x="146" y="379" width="28" height="21"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="g5i-6I-cpX">
                                 <rect key="frame" x="150" y="336" width="20" height="20"/>
                                 <color key="color" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
@@ -63,14 +57,25 @@
                                     <action selector="onLoginPressed:" destination="Lq1-Rd-akj" eventType="touchUpInside" id="eNw-d6-Zkl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hr-3F-RUR">
+                                <rect key="frame" x="92" y="434" width="136" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Refer A Friend">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OOl-o3-TG2" kind="modal" id="6GN-MS-Izb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="tRg-Ps-ob8" secondAttribute="trailing" constant="146" id="1i3-dL-iuQ"/>
-                            <constraint firstItem="tRg-Ps-ob8" firstAttribute="top" secondItem="qQw-xq-dkP" secondAttribute="bottom" constant="13" id="JQ7-yl-wS1"/>
-                            <constraint firstItem="tRg-Ps-ob8" firstAttribute="leading" secondItem="Ev8-Uf-ubH" secondAttribute="leading" constant="146" id="dhO-HH-YPF"/>
-                            <constraint firstItem="2Do-sZ-XH5" firstAttribute="top" secondItem="tRg-Ps-ob8" secondAttribute="bottom" constant="13" id="itT-J2-tbx"/>
-                            <constraint firstItem="Xth-yY-qDC" firstAttribute="top" secondItem="2Do-sZ-XH5" secondAttribute="bottom" constant="66" id="yoj-Rn-6yM"/>
+                            <constraint firstItem="Xth-yY-qDC" firstAttribute="top" secondItem="1hr-3F-RUR" secondAttribute="bottom" constant="45" id="EH4-nL-Ctp"/>
+                            <constraint firstItem="1hr-3F-RUR" firstAttribute="top" secondItem="2Do-sZ-XH5" secondAttribute="bottom" constant="15" id="ZOl-UE-Gq6"/>
+                            <constraint firstItem="2Do-sZ-XH5" firstAttribute="top" secondItem="qQw-xq-dkP" secondAttribute="bottom" constant="15" id="dze-Lh-zS6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8vm-la-htK"/>
@@ -80,6 +85,7 @@
                         <outlet property="emailTextField" destination="bNg-8A-090" id="qnz-7j-F9e"/>
                         <outlet property="loginButton" destination="qQw-xq-dkP" id="pmY-Sf-0lx"/>
                         <outlet property="passwordTextField" destination="YsZ-Wv-H3G" id="O9I-mn-57x"/>
+                        <outlet property="referFriendButton" destination="1hr-3F-RUR" id="uQV-39-ZmX"/>
                         <segue destination="hWT-bt-0dC" kind="push" identifier="ShowList" id="5A3-1r-uxW"/>
                     </connections>
                 </viewController>
@@ -325,7 +331,7 @@
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Request Cleaning">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="onRequestCleaning:" destination="t9M-sj-VIS" eventType="touchUpInside" id="kkz-Ak-rJK"/>
@@ -399,6 +405,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eX-AP-ec9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="875" y="716"/>
+        </scene>
+        <!--Friend Refer-->
+        <scene sceneID="oDa-GW-y7x">
+            <objects>
+                <viewController id="OOl-o3-TG2" customClass="FriendRefer" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q0R-Kf-15y"/>
+                        <viewControllerLayoutGuide type="bottom" id="SiB-qr-HZE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oD5-ly-2pc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name or Company" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LI0-Z7-scl">
+                                <rect key="frame" x="20" y="117" width="280" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or Phone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lDJ-dZ-Zax">
+                                <rect key="frame" x="20" y="166" width="280" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ok-tb-Ite">
+                                <rect key="frame" x="14" y="14" width="40" height="40"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDismissPressed:" destination="OOl-o3-TG2" eventType="touchUpInside" id="Mx5-8n-lJq"/>
+                                    <action selector="onDismissSignup:" destination="UA1-Uy-3Zn" eventType="touchUpInside" id="xPi-mH-kwu"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signuptitle" translatesAutoresizingMaskIntoConstraints="NO" id="Scv-v2-sEc" customClass="FriendRefer">
+                                <rect key="frame" x="0.0" y="42" width="320" height="67"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0D-dr-hjF">
+                                <rect key="frame" x="80" y="322" width="160" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.5568627451" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="Send Referral">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onRequestCleaning:" destination="t9M-sj-VIS" eventType="touchUpInside" id="XId-gC-xGj"/>
+                                    <action selector="onSendPressed:" destination="OOl-o3-TG2" eventType="touchUpInside" id="zOd-9k-172"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="referContactTextField" destination="lDJ-dZ-Zax" id="n2L-UW-yvP"/>
+                        <outlet property="referNameTextField" destination="LI0-Z7-scl" id="keJ-Fm-k0F"/>
+                        <outlet property="sendButton" destination="F0D-dr-hjF" id="7hw-pG-Gbj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E4Q-dc-7bl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="-1389"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="aTb-e2-yMB">

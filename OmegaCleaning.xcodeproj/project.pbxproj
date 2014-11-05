@@ -18,6 +18,7 @@
 		264B76A51989593F0006545F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B769C1989593F0006545F /* Security.framework */; };
 		264B76A61989593F0006545F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B769D1989593F0006545F /* StoreKit.framework */; };
 		264B76A71989593F0006545F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264B769E1989593F0006545F /* SystemConfiguration.framework */; };
+		2656B2C91A09D6E800E901D3 /* FriendRefer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2656B2C81A09D6E800E901D3 /* FriendRefer.m */; };
 		2659FCBE19A26E070046DBC2 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2659FCBC19A26E070046DBC2 /* splash.png */; };
 		2659FCBF19A26E070046DBC2 /* SplashLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 2659FCBD19A26E070046DBC2 /* SplashLarge.png */; };
 		265C2154198802A20093DC8E /* SignupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 265C2153198802A20093DC8E /* SignupVC.m */; };
@@ -65,6 +66,8 @@
 		264B769C1989593F0006545F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		264B769D1989593F0006545F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		264B769E1989593F0006545F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2656B2C71A09D6E800E901D3 /* FriendRefer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendRefer.h; sourceTree = "<group>"; };
+		2656B2C81A09D6E800E901D3 /* FriendRefer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendRefer.m; sourceTree = "<group>"; };
 		2659FCBC19A26E070046DBC2 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		2659FCBD19A26E070046DBC2 /* SplashLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashLarge.png; sourceTree = "<group>"; };
 		265C2152198802A20093DC8E /* SignupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupVC.h; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 				26331D901988340900D0F4EF /* InvoicesVC.m */,
 				267435A61988392A00AB9BF3 /* InvoiceDetailVC.h */,
 				267435A71988392A00AB9BF3 /* InvoiceDetailVC.m */,
+				2656B2C71A09D6E800E901D3 /* FriendRefer.h */,
+				2656B2C81A09D6E800E901D3 /* FriendRefer.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 				265C215D198803220093DC8E /* RequestQuoteVC.m in Sources */,
 				265C215A198803090093DC8E /* RequestCleaningVC.m in Sources */,
 				265C2154198802A20093DC8E /* SignupVC.m in Sources */,
+				2656B2C91A09D6E800E901D3 /* FriendRefer.m in Sources */,
 				26B984601985D80600105F7B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

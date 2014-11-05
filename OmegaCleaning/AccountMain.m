@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIImageView *checkMArk;
+@property (weak, nonatomic) IBOutlet UIButton *referFriendButton;
 
 @end
 
@@ -33,6 +34,9 @@
     self.createAccountButton.layer.cornerRadius = 5;
     self.createAccountButton.layer.masksToBounds = YES;
 
+    self.referFriendButton.layer.cornerRadius = 5;
+    self.referFriendButton.layer.masksToBounds = YES;
+
     self.loginButton.layer.cornerRadius = 5;
     self.loginButton.layer.masksToBounds = YES;
 
@@ -45,6 +49,7 @@
     [self.view addGestureRecognizer:screenTap];
 
 }
+
 
 - (IBAction)onLoginPressed:(id)sender{
 
