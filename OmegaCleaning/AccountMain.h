@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import <MessageUI/MessageUI.h>
 
 @interface AccountMain : UIViewController
 
