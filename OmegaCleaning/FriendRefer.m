@@ -61,7 +61,7 @@
 
         [referFriendVC setToRecipients:@[@"omegaservicesoffice@gmail.com"]];
         [referFriendVC setSubject:@"Client Referral"];
-        [referFriendVC setMessageBody:[NSString stringWithFormat:@"Hello, /n We Would like to refer a client for service. %@ can be reached at %@ /n /n Thanks!", self.referNameTextField.text, self.referContactTextField.text] isHTML:NO];
+        [referFriendVC setMessageBody:[NSString stringWithFormat:@"Hello, \n We Would like to refer a client for service. %@ can be reached at %@ \n \n Thanks!", self.referNameTextField.text, self.referContactTextField.text] isHTML:NO];
     
         [self presentViewController:referFriendVC animated:YES completion:^{
 
